@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="nl">
+<meta charset=UTF-8>
+<meta content="NRC is een Nederlandse roleplay community in FiveM (GTA V). Voor meer informatie en mededelingen, join onze discord!" name=description>
+<meta content="NRC, Roleplay, RP, Grand, Theft, Auto, Five, 5, Roleplay, Roleplaying, Multiplayer, Server, GTMP, FiveM, V, Server, Nederlands, NL" name=keywords>
+<meta content="www.wessel.pw" name=author>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1" name=viewport>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<title>NRC Roleplay | FiveM</title>
+<link href=images/favicon.ico rel=icon>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/modal.css">
+<body data-offset=70 data-spy=scroll data-target=.navbar-custom id=page-top>
+<header>
+    <nav class="NavBg navbar navbar-custom navbar-fixed-top navbar-top sticky-navigation">
+        <div class=container>
+            <div class=navbar-header>
+                <button class=navbar-toggle data-target=.navbar-main-collapse data-toggle=collapse type=button>
+                    <i class="fa fa-bars">
+                    </i>
+                </button>
+                <a href=#page-top class="page-scroll nav-logo navbar-brand">
+                    <img alt="nrc_logo" src=images/logo.png>
+                </a>
+                <div id="serverBox" class="serverBox">
+                    <b>Server Status </b>
+                    Spelers: <label id="currentPlayers">0</label>/<label>32</label>
+                    <div id="serverStatus" class="status_server">Laden...</div>
+                    <a data-toggle="modal" data-target="#myModal" class="status_server">Spelers informatie</a>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">In-game spelers informatie</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table id="spelers_info">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Naam</th>
+                                    <th>Steam</th>
+                                    <th>Ping</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Sluit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="collapse navbar-collapse navbar-main-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class=active>
+                        <a href=#page-top class=page-scroll>Home</a>
+                    <li>
+                        <a href="regels.html">Regels</a>
+                    <li>
+                        <a href="keybinds.html">Key(binds)</a>
+                    <li>
+                        <a href="https://discordapp.com/invite/MMpPav3" target="_blank">Discord</a>
+                    <li>
+                        <a href="nrc_politie/index.html">Politie Panel</a>
+                    <li>
+                        <a href=#solliciteren class=page-scroll>Solliciteren</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="section mt-50" id=intro>
+    <div class=container style=margin-bottom:-100px>
+        <div class=row>
+            <div class="col-md-6 col-sm-5 item">
+                <div class="fadeInUp wow text-center welcome_area_thumb">
+                    <img alt="heist_nrc" src="images/heist.png" class=img-responsive>
+                </div>
+            </div>
+            <div class="item col-md-5 col-md-offset-1 col-sm-7 welcome_text">
+                <div class="mt-80 welcome_text_area">
+                    <h1>NRC Roleplay.
+                    </h1>
+                    <p class=mb-40>NRC is een server op <b><a href="https://fivem.net" style="color: black;">FiveM</a></b>. De naam NRC staat voor Nederlandse Roleplay Community. Deze server staat helemaal in het teken van roleplay, ook word hier heel streng naar gekeken... Mensen die dus nog nooit hebben gespeeld op een RP server, dan raad ik je aan om even door te lezen.</p>
+                    <p class=mb-40>Voor het spelen van FiveM heb je GTA V nodig.  Als je onze server wil spelen is er een link naar de discord bovenaan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section another-section" id=app-brief>
+    <div class=container>
+        <div class="row relative">
+            <div class=phones>
+                <img alt="nrc_politie" src=images/politie_nrc.png class="fadeInUp wow img-responsive right-mob-front" data-wow-delay=0s data-wow-duration=1s data-wow-offset=50 style=right:unset>
+            </div>
+            <div class="col-md-6 col-md-offset-5">
+                <h2>Het Politie Korps</h2>
+                <p class=space40>
+                    In de stad hebben wij een groot politie korps. Als politie patrouilleer je in de stad en bescherm je burgers tegen criminaliteit. Je gaat naar winkel en bank overvallen en achtervolgt criminlelen met hoge snelheden over de snelweg. Het politie korps heeft een eigen <b><a href="nrc_politie/index.html">Politie Panel</a></b>. Wil jij ook politie worden in onze stad? <b><a href="#solliciteren" class=page-scroll>Solliciteer dan nu!</a></b>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section another-section" id=app-brief2>
+    <div class=container>
+        <div class="row relative">
+            <div class=col-md-6>
+                <h2>Wat is NRC</h2>
+                <p>NRC is een server op Fivem. Deze server staat helemaal in het teken van roleplay, ook word hier heel streng naar gekeken... Mensen die dus nog nooit hebben gespeeld op een RP server, dan raad ik je aan om even door te lezen.</p></div>
+            <div class=col-md-6>
+                <h2>Wat is RP?</h2>
+                <p>Als je NRC joined is het de bedoeling dat je een karakter aanmaakt waarmee jij gaat roleplayen. Dit betekent dat je in je rol blijft als je in de server zit. Denk aan anderen en zorg voor leuke scenario's i.p.v te focusen op geld.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section another-section" id=solliciteren style=text-align:left>
+    <div class=container>
+        <div class="row relative">
+            <div class=phones>
+                <img alt="solliciteren_NRC" src=images/3-man.png class="fadeInUp wow img-responsive solliciteren_img" data-wow-delay=0s data-wow-duration=1s data-wow-offset=50>
+            </div>
+            <div class=col-md-6>
+                <h1>Solliciteren</h1>
+                <p>Heb jij interesse om te solliciteren voor: Politie, Ambulance, ANWB, Advocaat of Makelaar? Voor bepaalde beroepen gelden kleine regels. Je moet voor het worden van politie agent minimaal 16 jaar zijn. Voor elke beroep zul je een vragenlijst op moeten sturen. Dat kan via de knop hieronder. Je kunt reactie verwachten via Discord/Steam/E-mail. Veel succes iedereen!</p>
+                <p>Als je een reactie ontvangt op je sollicitatie ben je door naar de volgende stap, dat is het sollicitatie gesprek. Dit gesprek ga je voeren met de desbetreffende persoon van het beroep waarop je solliciteert. Als dit gesprek goed verloopt ben je aangenomen! Vanaf dat moment kun je in de stad met je baan beginnen!</p>
+                <a class="download" href="#sollicitaties"></a>
+                <div class="platforms" id="sollicitaties">
+                    <a href="https://forms.gle/hkMiEF8vYjF32Acc9" data-os="Politie"><img src="https://img.icons8.com/color/48/000000/policeman-male.png" class="solliciteren_icon"></a>
+                    <a href="https://forms.gle/ap27ogmp7JzgbX457" data-os="Ambulance"><img src="https://img.icons8.com/color/48/000000/ambulance.png" class="solliciteren_icon"></a>
+                    <a href="https://forms.gle/rZEHom4inuAXAL8Y6" data-os="ANWB"><img src="https://img.icons8.com/office/50px/car.png?office=30" class="solliciteren_icon"></a>
+                    <a href="https://forms.gle/xxwTxUS74FFkJioQ6" data-os="Overige" style="margin-left: 565px;"><img src="https://img.icons8.com/color/48/000000/generic-sorting.png" class="solliciteren_icon_anwb"></a>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="politie_modal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">In-game spelers informatie</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Naam</th>
+                                        <th>Steam</th>
+                                        <th>Ping</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Sluit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+            </div>
+        </div>
+    </div>
+</section>
+<footer class=footer-style4 style="padding:0 0">
+    <div class="container flex-center text-left">
+        <div class="col-md-3 mb-md-20">
+            <a href=# class=page-scroll>
+                <img alt="nrc_logo" src=images/logo.png class="footer_logo">
+            </a>
+        </div>
+        <div>
+            <p class="copyright_text">Copyright © nrc-rp.nl | All Rights Reserved</p>
+        </div>
+        <div class=col-md-6>
+            <p class="made_by"><a href="http://wessel.pw" class="made_by_a">by Wessel</a></p>
+        </div>
+    </div>
+</footer>
+<script>
+    function add(x, y, base) {
+        var z = [];
+        var n = Math.max(x.length, y.length);
+        var carry = 0;
+        var i = 0;
+        while (i < n || carry) {
+            var xi = i < x.length ? x[i] : 0;
+            var yi = i < y.length ? y[i] : 0;
+            var zi = carry + xi + yi;
+            z.push(zi % base);
+            carry = Math.floor(zi / base);
+            i++;
+        }
+        return z;
+    }
+
+    function multiplyByNumber(num, x, base) {
+        if (num < 0) return null;
+        if (num == 0) return [];
+
+        var result = [];
+        var power = x;
+        while (true) {
+            if (num & 1) {
+                result = add(result, power, base);
+            }
+            num = num >> 1;
+            if (num === 0) break;
+            power = add(power, power, base);
+        }
+
+        return result;
+    }
+
+    function parseToDigitsArray(str, base) {
+        var digits = str.split('');
+        var ary = [];
+        for (var i = digits.length - 1; i >= 0; i--) {
+            var n = parseInt(digits[i], base);
+            if (isNaN(n)) return null;
+            ary.push(n);
+        }
+        return ary;
+    }
+
+    function convertBase(str, fromBase, toBase) {
+        var digits = parseToDigitsArray(str, fromBase);
+        if (digits === null) return null;
+
+        var outArray = [];
+        var power = [1];
+        for (var i = 0; i < digits.length; i++) {
+            if (digits[i]) {
+                outArray = add(outArray, multiplyByNumber(digits[i], power, toBase), toBase);
+            }
+            power = multiplyByNumber(fromBase, power, toBase);
+        }
+
+        var out = '';
+        for (var i = outArray.length - 1; i >= 0; i--) {
+            out += outArray[i].toString(toBase);
+        }
+        return out;
+    }
+    function hexToDec(hexStr) {
+        if (hexStr.substring(0, 2) === '0x') hexStr = hexStr.substring(2);
+        hexStr = hexStr.toLowerCase();
+        return convertBase(hexStr, 16, 10);
+    }
+
+    fetch('https://cors-anywhere.herokuapp.com/http://92.42.47.236:30120/players.json') // http://92.42.47.236:30120/players.json
+        .then(response => response.json())
+        .then(data => {
+            var obj = data;
+            document.getElementById('currentPlayers').innerHTML = obj.length;
+            document.getElementById("serverStatus").innerHTML = "<a class=online>Online</a>";
+
+            for (var i = 0; i < obj.length; i++) {
+                var id = obj[i].id;
+                var ping = obj[i].ping;
+                var name = obj[i].name;
+                var steam = obj[i].identifiers[0];
+                var discord = obj[i].identifiers[4];
+                var newsteam = steam.substr(6);
+                document.getElementById("spelers_info").innerHTML += "<tr><td style='width: 200px;'>" + id + "</td><td style='width: 400px'>" + name + "</td><td style='width: 200px;'>" + "<a class='black_a' target='_blank' href=http://steamcommunity.com/profiles/" + hexToDec(newsteam) + " ><i class='fab fa-steam-square fa-2x'></i></a></td><td style='width: 200px'>" + ping + "</td></tr>";
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            document.getElementById("serverStatus").innerHTML = "<a class=offline>Offline</a>"
+        });
+</script>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js></script>
+<script src=https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.3.1/jquery.placeholder.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxchimp/1.3.0/jquery.ajaxchimp.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.js></script>
+<script src=js/script.js></script>
+<script src=js/server.js></script>
+</body>
+</html>
