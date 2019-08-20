@@ -16,13 +16,14 @@ setInterval(fetchFunction,1000)
             var obj = data;
             var spelers = obj.length;
             var spelers_aantal = `Er zijn momenteel ${spelers} spelers online!`;
-            bot.user.setGame(`${spelers} spelers op NRC`); //you can set a default game
+            bot.user.setGame('NRC in development!'); //you can set a default game
+            
         })
         .catch(error => {
             console.log(error);
         });
     }
-    // bot.user.setGame('www.nrc-rp.nl'); //you can set a default game
+    // bot.user.setGame(`${spelers} spelers op NRC`); //you can set a default game
     // console.log(`Bot is online!\n${bot.users.size} spelers, in ${bot.guilds.size} servers connected.`);
 });
 
