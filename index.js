@@ -9,13 +9,13 @@ const bot = new Discord.Client({
 
 bot.on("ready", () => {
 setInterval(fetchFunction,1000)
-    function fetchFunction(){
-    fetch('http://151.80.54.182:30588/players.json')
-        .then(response => response.json())
-        .then(data => {
-            var obj = data;
-            var spelers = obj.length;
-            var spelers_aantal = `Er zijn momenteel ${spelers} spelers online!`;
+//     function fetchFunction(){
+//     fetch('http://151.80.54.182:30588/players.json')
+//         .then(response => response.json())
+//         .then(data => {
+//             var obj = data;
+//             var spelers = obj.length;
+//             var spelers_aantal = `Er zijn momenteel ${spelers} spelers online!`;
             bot.user.setGame('NRC in development!'); //you can set a default game
             
         })
