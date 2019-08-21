@@ -22,10 +22,10 @@ setInterval(fetchFunction,1000)
         .catch(error => {
             console.log(error);
         });
-    }
+//     }
     // bot.user.setGame(`${spelers} spelers op NRC`); //you can set a default game
     // console.log(`Bot is online!\n${bot.users.size} spelers, in ${bot.guilds.size} servers connected.`);
-});
+// });
 
 bot.on("message", async message => {
 
