@@ -22,7 +22,7 @@ bot.on("ready", () => {
 //             console.log(error);
 //         });
 //     }
-    bot.user.setGame('Under development ;)'); //you can set a default game
+    bot.user.setActivity('Under development ;)'); //you can set a default game
     console.log(`Bot is online!\n${bot.users.size} spelers, in ${bot.guilds.size} servers connected.`);
 });
 
