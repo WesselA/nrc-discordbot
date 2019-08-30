@@ -280,4 +280,3 @@ process.on('unhandledRejection', err => {
 
 // bot.login(config.token);
 bot.login(process.env.BOT_TOKEN);
-socket = io.listen(process.env.PORT);
