@@ -56,6 +56,20 @@ bot.on("message", async message => {
                     console.log(error);
                 });
         }
+        if (cmd === 'devserver') {
+            message.delete(1000);
+            fetch('http://134.255.220.39:32012/players.json')
+                .then(response => response.json())
+                .then(data => {
+                    var obj = data;
+                    var spelers = obj.length;
+                    var spelers_aantal = `Er zijn momenteel ${spelers} spelers online op de dev server!`;
+                    return message.channel.send(spelers_aantal);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
         // message.channel.send
         // message.author.send/
         if (cmd === 'over') {
@@ -74,7 +88,7 @@ bot.on("message", async message => {
                         },
                         {
                             name: "Door",
-                            value: "Gemaakt door <@262213629796024320>, met dank aan <@147363094186688512> 🙃"
+                            value: "Gemaakt door <@262213629796024320> 🙃"
                         }
                     ],
                 }
@@ -110,34 +124,43 @@ bot.on("message", async message => {
                 }
             });
         }
-
-        if(cmd === `auto`){
-            let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-            if (!dUser) return message.channel.send("Tag een speler uit deze discord!");
-            if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Helaas, geen perms!");
+        if(cmd === 'checkrol'){
+            let allowedRole = message.guild.roles.find("name", "NRC Geverifieerd");
+            if (message.member.roles.has(allowedRole.id)) {
+                // hier code van contactm
+            } else {
+               return message.channel.send("Je hebt de NRC Geverifieerd rol nodig om dit uit te voeren, check " + message.guild.channels.get('614397049621970944').toString());
+            }
+        }
+        if(cmd === `contactm`){
+            let allowedRole = message.guild.roles.find("name", "NRC Geverifieerd");
+            if (message.member.roles.has(allowedRole.id)) {
+                let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
+            if (!dUser) return message.channel.send("Tag een makelaar uit de discord!");
+            // if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Helaas, geen perms!");
             let dMessage = args.join(" ").slice(22);
-            if(dMessage.length < 1) return message.reply('Vul je telefoon nummer in!');
+            if(dMessage.length < 1) return message.reply('Vul hier je informatie in voor de makelaar!');
 
             dUser.send({embed: {
                     color: 10354690,
-                    description: "Uw order voor de exclusieve auto dealer is aangekomen!",
+                    description: "Je hebt een bericht van een klant ontvangen, hieronder lees je meer informatie. Stuur deze persoon een PM en spreek een datum af voor een afspraak.",
                     fields: [
                         {
-                            name: "Informatie",
-                            value: `Omdat de bestelling gedaan is via de website krijg je korting op deze auto. Hieronder vindt je het telefoon nummer van de auto handelaar, stuur hem een berichtje als hij in de stad is!`
+                            name: "Afkomst",
+                            value: `${message.author} heeft een makelaar in de stad nodig. Hieronder vind je meer informatie over zijn benodigdheden.`
                         },
                         {
-                            name: "Contact",
-                            value: `Het telefoon nummer van ${message.author} is ${dMessage}. Stuur hem een berichtje om de auto te kopen!`
-                        },
-                        {
-                            name: "Geholpen door",
-                            value: `De bestelling is verwerkt door ${message.author}!`
+                            name: "Bericht",
+                            value: `Hij schreef: \n${dMessage}`
                         }
                     ],
                 }
-            });///
-            message.author.send(`${message.author} Succes! Het bericht is verzonden naar ${dUser}, hij stuurt je een bericht in de stad.`)
+            });
+            message.author.send(`${message.author} Succes! Het bericht is verzonden naar ${dUser}, hij zal je benaderen als hij tijd heeft.`)
+            message.delete(1000);
+            } else {
+               return message.channel.send("Je hebt de NRC Geverifieerd rol nodig om dit uit te voeren, check " + message.guild.channels.get('614397049621970944').toString());
+            }
         }
         if (cmd === 'verify') {
             message.delete(1000);
