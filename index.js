@@ -10,19 +10,19 @@ const bot = new Discord.Client({
 bot.on("ready", () => {
 // setInterval(fetchFunction,1000)
 //     function fetchFunction(){
-//     fetch('http://151.80.54.182:30588/players.json')
+//     fetch('http://134.255.220.39:32012/players.json')
 //         .then(response => response.json())
 //         .then(data => {
 //             var obj = data;
 //             var spelers = obj.length;
 //             var spelers_aantal = `Er zijn momenteel ${spelers} spelers online!`;
-//             bot.user.setGame(`${spelers} spelers op NRC`); //you can set a default game
+//             bot.user.setActivity(`${spelers} spelers op NRC`);
 //         })
 //         .catch(error => {
 //             console.log(error);
 //         });
 //     }
-    bot.user.setActivity('Under development ;)'); //you can set a default game
+    bot.user.setActivity('Under development ;)');
     console.log(`Bot is online!\n${bot.users.size} spelers, in ${bot.guilds.size} servers connected.`);
 });
 
@@ -44,26 +44,12 @@ bot.on("message", async message => {
 
         if (cmd === 'spelers') {
             message.delete(1000);
-            fetch('http://151.80.54.182:30588/players.json')
-                .then(response => response.json())
-                .then(data => {
-                    var obj = data;
-                    var spelers = obj.length;
-                    var spelers_aantal = `Er zijn momenteel ${spelers} spelers online!`;
-                    return message.channel.send(spelers_aantal);
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-        }
-        if (cmd === 'devserver') {
-            message.delete(1000);
             fetch('http://134.255.220.39:32012/players.json')
                 .then(response => response.json())
                 .then(data => {
                     var obj = data;
                     var spelers = obj.length;
-                    var spelers_aantal = `Er zijn momenteel ${spelers} spelers online op de dev server!`;
+                    var spelers_aantal = `Er zijn momenteel ${spelers} spelers online!`;
                     return message.channel.send(spelers_aantal);
                 })
                 .catch(error => {
@@ -247,7 +233,7 @@ bot.on("message", async message => {
         }
         else if (cmd === 'ip') {
             message.delete(1000);
-            return message.channel.send('De server staat nog niet online, binnenkort! ;)');
+            return message.channel.send('De server ip is: 134.255.220.39:32012');
         }
         else if (cmd === 'spam') {
             message.delete(1);
