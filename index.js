@@ -8,22 +8,22 @@ const bot = new Discord.Client({
 });
 
 bot.on("ready", () => {
-// setInterval(fetchFunction,1000)
-//     function fetchFunction(){
-//     fetch('http://134.255.220.39:32012/players.json')
-//         .then(response => response.json())
-//         .then(data => {
-//             var obj = data;
-//             var spelers = obj.length;
-//             var spelers_aantal = `Er zijn momenteel ${spelers} spelers online!`;
-//             bot.user.setActivity(`${spelers} spelers op NRC`);
-//         })
-//         .catch(error => {
-//             console.log(error);
-//         });
-//     }
-    bot.user.setActivity('Under development ;)');
-    console.log(`Bot is online!\n${bot.users.size} spelers, in ${bot.guilds.size} servers connected.`);
+setInterval(fetchFunction,1000)
+    function fetchFunction(){
+    fetch('http://134.255.217.175:32012/players.json')
+        .then(response => response.json())
+        .then(data => {
+            var obj = data;
+            var spelers = obj.length;
+            var spelers_aantal = `Er zijn momenteel ${spelers} spelers online!`;
+            bot.user.setActivity(`${spelers} spelers op NRC`);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
+//     bot.user.setActivity('Under development ;)');
+//     console.log(`Bot is online!\n${bot.users.size} spelers, in ${bot.guilds.size} servers connected.`);
 });
 
 bot.on("message", async message => {
@@ -44,7 +44,7 @@ bot.on("message", async message => {
 
         if (cmd === 'spelers') {
             message.delete(1000);
-            fetch('http://134.255.220.39:32012/players.json')
+            fetch('http://134.255.217.175:32012/players.json')
                 .then(response => response.json())
                 .then(data => {
                     var obj = data;
