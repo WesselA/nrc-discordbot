@@ -233,7 +233,7 @@ bot.on("message", async message => {
         }
         else if (cmd === 'ip') {
             message.delete(1000);
-            return message.channel.send('De server ip is: 134.255.220.39:32012');
+            return message.channel.send('De server ip is: 134.255.217.175:32012');
         }
         else if (cmd === 'spam') {
             message.delete(1);
