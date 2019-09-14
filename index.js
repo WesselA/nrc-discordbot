@@ -10,7 +10,7 @@ const bot = new Discord.Client({
 bot.on("ready", () => {
 setInterval(fetchFunction,1000)
     function fetchFunction(){
-    fetch('http://134.255.217.175:32012/players.json')
+    fetch('http://134.255.220.25:32012/players.json')
         .then(response => response.json())
         .then(data => {
             var obj = data;
@@ -44,7 +44,7 @@ bot.on("message", async message => {
 
         if (cmd === 'spelers') {
             message.delete(1000);
-            fetch('http://134.255.217.175:32012/players.json')
+            fetch('http://134.255.220.25:32012/players.json')
                 .then(response => response.json())
                 .then(data => {
                     var obj = data;
@@ -233,7 +233,7 @@ bot.on("message", async message => {
         }
         else if (cmd === 'ip') {
             message.delete(1000);
-            return message.channel.send('De server ip is: 134.255.217.175:32012');
+            return message.channel.send('De server ip is: 134.255.220.25:32012');
         }
         else if (cmd === 'spam') {
             message.delete(1);
